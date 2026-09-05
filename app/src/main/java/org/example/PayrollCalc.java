@@ -17,15 +17,18 @@ public class PayrollCalc {
     }
     public double calcSocSec(double gross)
     {
-        return gross*.06;
+        double result = gross*.06;
+        return Math.round(result * 100)/100.0;
     }
     public double calcFedTax(double gross)
     {
-        return gross*.14;
+        double result = gross*.14;
+        return Math.round(result * 100)/100.0;
     }
     public double calcStTax(double gross)
     {
-        return gross*.05;
+        double result = gross*.05;
+        return Math.round(result * 100)/100.0;
     }
     public double calcUnionDues(boolean isMember)
     {
